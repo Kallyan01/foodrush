@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, Image, Text } from "react-native";
+import { View, StyleSheet, Image, Text, TouchableOpacity } from "react-native";
 import { AntDesign, EvilIcons } from "@expo/vector-icons";
 const FeaturedCard = ({
   title,
@@ -11,12 +11,14 @@ const FeaturedCard = ({
   address,
 }) => {
   return (
-    <View className="bg-white pb-4 rounded-xl overflow-hidden mr-3" onPress={()=>console.log("clicked")}>
+    <TouchableOpacity activeOpacity={0.9} onPress={()=>console.log("clicked")}>
+    <View className="bg-white pb-4 rounded-xl overflow-hidden mr-3" >
       <Image
         source={{
           uri: imgUrl,
         }}
         className="h-44 w-56"
+        
       />
       <View className="px-2">
         <View>
@@ -35,6 +37,7 @@ const FeaturedCard = ({
         </View>
       </View>
     </View>
+    </TouchableOpacity>
   );
 };
 
