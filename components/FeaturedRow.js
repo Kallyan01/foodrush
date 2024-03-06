@@ -10,7 +10,7 @@ const FeaturedRow = ({ title, description }) => {
         <Text className="text-xl font-bold">{title}</Text>
         <AntDesign name="arrowright" size={24} color="gray" />
       </View>
-      <Text className="px-4 text-gray-500 text-xs">{description}</Text>
+      <Text className="px-4 text-gray-500 text-xs ">{description}</Text>
       <ScrollView
         contentContainerStyle={{
           paddingHorizontal: 15,

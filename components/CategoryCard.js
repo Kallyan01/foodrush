@@ -7,7 +7,7 @@ const CategoryCard = ({imgUrl,title}) => {
             <Image source={{
                 uri: imgUrl
             }} className="h-20 w-20 rounded-full"/>
-            <Text className="text-xs font-bold text-gray-600">{title}</Text>
+            <Text className="text-xs font-bold text-gray-600 ">{title}</Text>
         </View>
     );
 }

@@ -12,7 +12,7 @@ const FeaturedCard = ({
 }) => {
   return (
     <TouchableOpacity activeOpacity={0.9} onPress={()=>console.log("clicked")}>
-    <View className="bg-white pb-4 rounded-xl overflow-hidden mr-3" >
+    <View className="bg-white pb-4  rounded-xl overflow-hidden mr-3 " >
       <Image
         source={{
           uri: imgUrl,

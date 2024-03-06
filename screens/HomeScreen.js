@@ -31,7 +31,7 @@ const HomeScreen = () => {
               className="h-7 w-7 rounded-full"
             />
             <View>
-              <Text className="font-bold text-gray-400 text-xs">
+              <Text className="font-bold text-gray-400 text-xs ">
                 Deliver Now
               </Text>
               <View className="flex flex-row items-center">
