@@ -44,10 +44,10 @@ const LoginScreen = () => {
     <SafeAreaView>
       <Background>
         <View className="flex flex-col justify-end h-full">
-          <Text className="text-center font-[700] text-[40px] mb-[10px]">
+          <Text className="text-center font-[700] text-[40px] mb-[10px] color-white">
             Login
           </Text>
-          <View className="bg-slate-400 h-3/4 rounded-tl-[100px] flex pt-[100px] space-y-5 mt-10">
+          <View className="bg-black/80 blur-sm h-3/4 rounded-tl-[100px] flex pt-[100px] space-y-5 mt-10">
             <View className="flex  space-x-2 p-2 mx-10 bg-gray-200 overflow-hidden rounded-lg">
               {/* <Ionicons name="ios-search-outline" size={20} color="black" /> */}
               <TextInput
