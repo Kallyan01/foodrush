@@ -15,6 +15,7 @@ import {
 
   import {useForm} from 'react-hook-form'
 function Login() {
+  const SERVER_URL = process.env.SERVER_URL;
     const navigation = useNavigation();
     const {control,handleSubmit} = useForm({mode:'onChange'})
 
@@ -29,7 +30,7 @@ function Login() {
 
   const handleLogin=(user)=>{
     setLoading(true)
-    axios.post('https://e6ef-160-238-92-250.ngrok-free.app/login',user)
+    axios.post(`${SERVER_URL}/login`,user)
     .then((data)=>{
       setLoading(false)
       navigation.navigate("Home");

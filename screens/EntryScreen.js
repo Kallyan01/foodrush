@@ -1,6 +1,7 @@
 import Background from "../components/Background";
 import Login from "../components/Login";
 import Register from "../components/Register";
+import { SERVER_URL } from "@env";
 import { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -12,6 +13,7 @@ import {
 } from "react-native";
 
 const EntryScreen = () => {
+  
   const [activeTab, setActiveTab] = useState("login");
   return (
     <SafeAreaView>

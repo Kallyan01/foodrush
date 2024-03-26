@@ -7,6 +7,7 @@ import { StyleSheet, Text, TextInput, View } from "react-native";
 import { Button } from "react-native";
 
 const OtpValidation = ({length = 4, email=''}) => {
+  const SERVER_URL = process.env.SERVER_URL;
   const navigation = useNavigation();
   const [otp, setOtp] = useState(new Array(length).fill(""));
   const inputRefs = useRef([]);
@@ -19,7 +20,7 @@ const OtpValidation = ({length = 4, email=''}) => {
 onOtpSubmit = async (otp) => {
    console.log(otp)
     if (otp.length === length) 
-    axios.post(' https://677f-146-196-47-155.ngrok-free.app/verify', {email,otp})
+    axios.post(`${SERVER_URL}/verify`, {email,otp})
     .then((data)=>{
       setLoading(false)
       navigation.navigate("Home");

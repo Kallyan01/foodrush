@@ -15,6 +15,7 @@ import {
 } from "react-native";
 
 function Register() {
+  const SERVER_URL = process.env.SERVER_URL;
   const navigation = useNavigation();
     const {control,handleSubmit} = useForm({mode:'onChange'})
   const [step,setStep] =useState({
@@ -32,7 +33,7 @@ function Register() {
     console.log(data)
     const {email,password} = data
     setLoading(true)
-    axios.post(' https://677f-146-196-47-155.ngrok-free.app/sendotp', {email,password})
+    axios.post(`${SERVER_URL}/sendotp`, {email,password})
     .then((data)=>{
       setLoading(false)
       setStep({
