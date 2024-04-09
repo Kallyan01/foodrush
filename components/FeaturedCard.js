@@ -1,6 +1,9 @@
 import React from "react";
-import { View, StyleSheet, Image, Text, TouchableOpacity } from "react-native";
 import { AntDesign, EvilIcons } from "@expo/vector-icons";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { userSliceZS } from "../zustand/slice/userSliceZS";
+import { useDashboardStore, useStore } from "../zustand/store";
+
 const FeaturedCard = ({
   title,
   imgUrl,
@@ -9,9 +12,12 @@ const FeaturedCard = ({
   description,
   dishes,
   address,
+  ...props
 }) => {
+  const {setCart} = useDashboardStore(state=>state.user)
+  
   return (
-    <TouchableOpacity activeOpacity={0.9} onPress={()=>console.log("clicked")}>
+    <TouchableOpacity activeOpacity={0.9} onPress={()=>setCart({name:title,price:100})}>
     <View className="bg-white pb-4  rounded-xl overflow-hidden mr-3 " >
       <Image
         source={{

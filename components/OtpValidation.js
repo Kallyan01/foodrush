@@ -18,7 +18,7 @@ const OtpValidation = ({length = 4, email=''}) => {
     }
   }, []);
 onOtpSubmit = async (otp) => {
-   console.log(otp)
+  
     if (otp.length === length) 
     axios.post(`${SERVER_URL}/verify`, {email,otp})
     .then((data)=>{

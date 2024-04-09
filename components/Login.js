@@ -30,6 +30,7 @@ function Login() {
 
   const handleLogin=(user)=>{
     setLoading(true)
+    navigation.navigate("Home");
     axios.post(`${SERVER_URL}/login`,user)
     .then((data)=>{
       setLoading(false)

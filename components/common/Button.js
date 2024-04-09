@@ -8,8 +8,8 @@ import { View } from "react-native";
 const FRButton = ({ onclick, iconName,title,children ,className }) =>{ 
 
 return(
-  <TouchableHighlight onPress={onclick} className=" bg-red-500 rounded-sm"  underlayColor="white">
-    <View className={`gap-2 flex justify-center items-center flex-row p-[6px]  ${className}`}>
+  <TouchableHighlight onPress={onclick}   underlayColor="white">
+    <View className={`flex justify-center items-center flex-row p-[6px] bg-red-500 w-[50px] rounded-full  ${className}`}>
     {iconName && <Icon name={iconName} size={18} className="text-black" />}
     {title && <Text className="text-[16px] font-[500] text-white">{title}</Text>}
     {children && children}
